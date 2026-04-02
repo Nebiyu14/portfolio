@@ -1,0 +1,194 @@
+/* ── container ── */
+.projects__section__container {
+  padding: 5rem 3rem;
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ── title ── */
+.projects__section__title {
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.projects__section__title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0px;
+  width: 70%;
+  height: 3px;
+  background: linear-gradient(to right, #3b82f6, transparent);
+}
+
+/* ── grid ── */
+.projects__section__content {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+/* ── single card ── */
+.projects__section__card {
+  background-color: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 14px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.projects__section__card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(59, 130, 246, 0.4);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3);
+}
+
+/* ── icon banner ── */
+.projects__section__icon__banner {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.4s ease;
+}
+
+.projects__section__card:hover .projects__section__icon__banner {
+  transform: scale(1.06);
+}
+
+/* ── overlay buttons ── */
+.projects__section__overlay__btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0.5rem 1.1rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border-radius: 8px;
+  text-decoration: none;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+  background: linear-gradient(135deg, #3b82f6, #6366f1);
+  color: #ffffff;
+  box-shadow: 0 0px 15px rgba(59, 131, 246, 0.287);
+}
+
+.projects__section__overlay__btn--ghost {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: none;
+}
+
+.projects__section__overlay__btn:hover {
+  box-shadow: 0 0px 14px rgba(59, 131, 246, 0.687);
+  transform: translateY(-2px);
+}
+
+/* ── card body ── */
+.projects__section__body {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  flex: 1;
+}
+
+/* ── meta — title + type ── */
+.projects__section__meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.projects__section__card__title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  text-align: center;
+}
+
+.projects__section__type {
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #3b82f6;
+}
+
+/* ── description ── */
+.projects__section__description {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  text-align: center;
+  flex: 1;
+}
+
+/* ── tech badges ── */
+.projects__section__tech {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: auto;
+}
+
+.projects__section__tech__badge {
+  padding: 0.25rem 0.7rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  border-radius: 999px;
+  background-color: var(--bg-tertiary);
+  color: var(--text-secondary);
+  border: 1px solid var(--border-color);
+}
+
+/* ── image wrapper ── */
+.projects__section__image__wrapper {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+/* ── overlay ── */
+.projects__section__overlay {
+  position: absolute;
+  inset: 0;
+  backdrop-filter: blur(3px);
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 1rem;
+  justify-content: center;
+  gap: 1rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* show overlay on card hover */
+.projects__section__card:hover .projects__section__overlay {
+  opacity: 1;
+}
+
+/* ── mobile ── */
+@media (max-width: 768px) {
+  .projects__section__container {
+    padding: 3rem 1.5rem;
+  }
+}

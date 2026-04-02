@@ -5,6 +5,7 @@ import Hero from "./components/hero/Hero";
 import About from "./components/about/About";
 import Skills from "./components/skills/Skills";
 import Services from "./components/services/Services";
+import Projects from "./components/projects/Projects";
 
 function App() {
   const [isDark, setIsDark] = useState(true);
@@ -26,6 +27,7 @@ function App() {
         <About />
         <Skills />
         <Services />
+        <Projects />
       </div>
     </>
   );
