@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./about.css";
 
 import { FaLinkedin, FaGithub } from "react-icons/fa";
@@ -6,6 +6,7 @@ import { MdDownload } from "react-icons/md";
 import profileAvator from "../../assets/avatar_rectangualr.png";
 
 function About() {
+  const [showMore, setShowMore] = useState(false);
   return (
     <div className="about__section__container">
       <h2 className="about__section__title">About Me</h2>
@@ -20,16 +21,36 @@ function About() {
             the modern JavaScript ecosystem, particularly React and Node.js. I
             enjoy taking ideas from concept to deployment, developing end-to-end
             solutions.
+            {!showMore && (
+              <>
+                {" "}
+                <span
+                  className="about__section__read_more_inline"
+                  onClick={() => setShowMore(true)}
+                >
+                  Read more
+                </span>
+              </>
+            )}
           </p>
 
-          <p className="about__section__brief">
-            I’m detail-oriented and continuously working to improve my skills by
-            learning new technologies and best practices. I adapt quickly to new
-            tools and workflows, collaborate effectively with teams, and stay
-            committed to delivering high-quality results on time. I’m always
-            looking for opportunities to grow as a developer and deepen my
-            expertise in web development.
-          </p>
+          {showMore && (
+            <p className="about__section__brief">
+              I’m detail-oriented and continuously working to improve my skills
+              by learning new technologies and best practices. I adapt quickly
+              to new tools and workflows, collaborate effectively with teams,
+              and stay committed to delivering high-quality results on time. I’m
+              always looking for opportunities to grow as a developer and deepen
+              my expertise in web development.
+              {""}
+              <span
+                className="about__section__read_more_inline"
+                onClick={() => setShowMore(false)}
+              >
+                Read less
+              </span>
+            </p>
+          )}
         </div>
 
         {/* right — image + socials */}

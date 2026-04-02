@@ -4,6 +4,7 @@ import Header from "./components/header/Header";
 import Hero from "./components/hero/Hero";
 import About from "./components/about/About";
 import Skills from "./components/skills/Skills";
+import Services from "./components/services/Services";
 
 function App() {
   const [isDark, setIsDark] = useState(true);
@@ -24,6 +25,7 @@ function App() {
         <Hero />
         <About />
         <Skills />
+        <Services />
       </div>
     </>
   );

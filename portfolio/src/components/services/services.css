@@ -1,0 +1,116 @@
+/* ── container ── */
+.services__section__container {
+  padding: 5rem 3rem;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ── title ── */
+.services__section__title {
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.services__section__title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0px;
+  width: 70%;
+  height: 3px;
+  background: linear-gradient(to right, #3b82f6, transparent);
+}
+
+/* ── grid ── */
+.services__section__content {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+/* ── single card ── */
+.services__section__card {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 14px;
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+  overflow: hidden;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.services__section__card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(59, 130, 246, 0.4);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3);
+}
+
+/* ── icon wrapper ── */
+.services__section__icon__wrapper {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(59, 130, 246, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.services__section__card:hover .services__section__icon__wrapper {
+  transform: scale(1.1);
+}
+
+/* ── icon ── */
+.services__section__icon {
+  color: #3b82f6;
+}
+
+/* ── card title ── */
+.services__section__card__title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+/* ── card description ── */
+.services__section__card__description {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  flex: 1;
+}
+
+/* ── bottom underline ── */
+.services__section__card__line {
+  height: 2px;
+  width: 0%;
+  border-radius: 999px;
+  background: #3b82f6;
+  transition: width 0.5s ease;
+}
+
+.services__section__card:hover .services__section__card__line {
+  width: 100%;
+}
+
+/* ── mobile ── */
+@media (max-width: 768px) {
+  .services__section__container {
+    padding: 3rem 1.5rem;
+  }
+}

@@ -46,6 +46,20 @@
   line-height: 1.8;
   margin-top: 1rem;
   font-family: var(--font-sans);
+  transition: all 0.3s ease;
+}
+
+.about__section__read_more_inline {
+  color: var(--primary-color);
+  cursor: pointer;
+  font-weight: 300;
+  margin-left: 5px;
+  transition: all 0.3s ease;
+}
+
+.about__section__read_more_inline:hover {
+  text-decoration: underline;
+  letter-spacing: 0.3px;
 }
 
 /* ── right — image + social links ── */
