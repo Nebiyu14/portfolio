@@ -14,6 +14,7 @@
   box-shadow: var(--shadow-md);
   height: 70px;
   position: sticky;
+  letter-spacing: 0.4px;
 }
 
 /* logo */
@@ -96,6 +97,7 @@
   .header__section__container {
     position: relative;
     z-index: 5;
+    padding: 2rem 1.5rem;
   }
 
   .header__section__navlinks {
@@ -127,6 +129,7 @@
     transform: translateY(0);
     max-height: 600px;
     opacity: 1;
+    color: white;
   }
 
   .header__section__navlinks ul {
