@@ -1,10 +1,8 @@
 import React, { useState } from "react";
 import "./header.css";
 
-import { FaLinkedin } from "react-icons/fa";
-import { FaGithub } from "react-icons/fa";
-import { MdDarkMode } from "react-icons/md";
-import { MdLightMode } from "react-icons/md";
+import { FaLinkedin, FaGithub } from "react-icons/fa";
+import { MdDarkMode, MdLightMode } from "react-icons/md";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { RxCross2 } from "react-icons/rx";
 import { Link } from "react-router-dom";
@@ -15,7 +13,7 @@ function Header({ isDark, toggleTheme }) {
     <div className="header__section__container">
       {/* logo */}
       <div className="header__section__logo">
-        <Link to={"/"}>Nadew</Link>
+        <Link to={"/"}>ናደዉ ወልደሰማያት</Link>
       </div>
       <div>
         {/* navlinks */}
