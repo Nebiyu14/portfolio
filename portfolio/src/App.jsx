@@ -6,6 +6,7 @@ import About from "./components/about/About";
 import Skills from "./components/skills/Skills";
 import Services from "./components/services/Services";
 import Projects from "./components/projects/Projects";
+import Notice from "./components/notice/Notice";
 
 function App() {
   const [isDark, setIsDark] = useState(true);
@@ -23,6 +24,7 @@ function App() {
     <>
       <div>
         <Header isDark={isDark} toggleTheme={toggleTheme} />
+        <Notice/>
         <Hero />
         <About />
         <Skills />

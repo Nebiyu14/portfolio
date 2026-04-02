@@ -1,0 +1,26 @@
+.maintenance__container {
+  padding: 0.2rem 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-primary);
+  overflow: hidden;
+  position: sticky;
+  top: 70px;
+  z-index: 3;
+}
+
+.maintenance__text {
+  font-size: clamp(2vw, 4vw, 6vw);
+  font-weight: 600;
+  color: var(--text-secondary);
+  color: red;
+  white-space: nowrap;
+  animation: bounce__x 3s ease-in-out infinite;
+}
+
+@keyframes bounce__x {
+  0%   { transform: translateX(-20px); }
+  50%  { transform: translateX(20px);  }
+  100% { transform: translateX(-20px); }
+}
