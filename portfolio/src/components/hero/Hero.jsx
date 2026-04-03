@@ -7,7 +7,8 @@ function Hero() {
   return (
     <div className="hero__section__container">
       <div className="hero__section__content">
-        <h1 className="hero__section__title">ሰላም, I'm ጋሽ ናደዉ እባላለዉ</h1>
+        {/* <h1 className="hero__section__title">ሰላም, I'm ጋሽ ናደዉ እባላለዉ</h1> */}
+        <h1 className="hero__section__title">ሰላም ፣ አቶ ነብዩ ናደዉ እባላለዉ!</h1>
         {/* <h1 className="hero__section__title">Hi, I'm Nebiyu Tesfaye Nadew</h1> */}
         <div className="hero__section__animation">
           <TypeAnimation
