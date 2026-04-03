@@ -1,4 +1,4 @@
-/* ── container ── */
+/* . container . */
 .about__section__container {
   padding: 5rem 3rem;
   background-color: var(--bg-secondary);
@@ -8,7 +8,7 @@
   align-items: center;
 }
 
-/* ── title ── */
+/* . title . */
 .about__section__title {
   font-size: clamp(1.8rem, 3vw, 2.5rem);
   font-weight: 700;
@@ -28,14 +28,14 @@
   background: linear-gradient(to right, #3b82f6, transparent);
 }
 
-/* ── content — two columns ── */
+/* . content — two columns . */
 .about__section__content {
   display: flex;
   align-items: center;
   gap: 4rem;
 }
 
-/* ── left — text ── */
+/* . left — text . */
 .about__section__text {
   flex: 1;
 }
@@ -62,7 +62,7 @@
   letter-spacing: 0.3px;
 }
 
-/* ── right — image + social links ── */
+/* . right — image + social links . */
 .about__section__right {
   display: flex;
   flex-direction: column;
@@ -71,7 +71,7 @@
   flex-shrink: 0; /* do not shrink me when ...*/
 }
 
-/* ── image ── */
+/* . image . */
 .about__section__image {
   width: 250px;
   height: 250px;
@@ -106,14 +106,14 @@
   transform: scale(1.06);
 }
 
-/* ── actions — icons + cv button ── */
+/* . actions — icons + cv button . */
 .about__section__actions {
   display: flex;
   align-items: center;
   gap: 1rem;
 }
 
-/* ── social icons ── */
+/* . social icons . */
 .about__section__icon {
   color: var(--text-primary);
   transition:
@@ -126,7 +126,7 @@
   transform: scale(1.15);
 }
 
-/* ── download cv button ── */
+/* . download cv button . */
 .about__section__btn__cv {
   display: inline-flex;
   align-items: center;
@@ -157,7 +157,7 @@
   box-shadow: 0 4px 15px rgba(59, 130, 246, 0.2);
 }
 
-/* ── mobile ── */
+/* . mobile . */
 @media (max-width: 768px) {
   .about__section__container {
     padding: 3rem 1.5rem;

@@ -7,7 +7,7 @@ import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 function Projects() {
   return (
     <div className="projects__section__container">
-      <h2 className="projects__section__title">Projects</h2>
+      <h2 className="projects__section__title">Featured Projects</h2>
 
       <div className="projects__section__content">
         {projectData.map((project) => {
@@ -15,7 +15,7 @@ function Projects() {
 
           return (
             <div className="projects__section__card" key={project.title}>
-              {/* ── icon banner + overlay ── */}
+              {/* . icon banner + overlay . */}
               <div className="projects__section__image__wrapper">
                 <div
                   className="projects__section__icon__banner"
@@ -46,7 +46,7 @@ function Projects() {
                 </div>
               </div>
 
-              {/* ── card body ── */}
+              {/* . card body . */}
               <div className="projects__section__body">
                 <div className="projects__section__meta">
                   <h3 className="projects__section__card__title">

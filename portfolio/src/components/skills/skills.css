@@ -1,4 +1,4 @@
-/* ── container ── */
+/* . container . */
 .skills__section__container {
   padding: 5rem 3rem;
   background-color: var(--bg-secondary);
@@ -8,7 +8,7 @@
   align-items: center;
 }
 
-/* ── title ── */
+/* . title . */
 .skills__section__title {
   font-size: clamp(1.8rem, 3vw, 2.5rem);
   font-weight: 700;
@@ -27,7 +27,7 @@
   background: linear-gradient(to right, #3b82f6, transparent);
 }
 
-/* ── grid of cards ── */
+/* . grid of cards . */
 .skills__section__content {
   width: 100%;
   display: grid;
@@ -35,7 +35,7 @@
   gap: 20px;
 }
 
-/* ── single card ── */
+/* . single card . */
 .skills__section__card {
   background-color: var(--bg-primary);
   border: 1px solid var(--border-color);
@@ -57,7 +57,7 @@
   box-shadow: 0 8px 24px rgba(59, 130, 246, 0.12);
 }
 
-/* ── category title ── */
+/* . category title . */
 .skills__section__category {
   font-size: 0.85rem;
   font-weight: 700;
@@ -66,7 +66,7 @@
   color: #3b82f6;
 }
 
-/* ── badges wrapper ── */
+/* . badges wrapper . */
 .skills__section__items {
   display: flex;
   justify-content: center;
@@ -74,7 +74,7 @@
   gap: 1rem;
 }
 
-/* ── single badge ── */
+/* . single badge . */
 .skills__section__badge {
   display: flex;
   flex-direction: column;
@@ -99,7 +99,6 @@
   transform: translateY(-3px);
 }
 
-
 .skills__section__badge__icon {
   opacity: 0.75;
   transition:
@@ -112,7 +111,7 @@
   transform: scale(1.15);
 }
 
-/* ── mobile ── */
+/* . mobile . */
 @media (max-width: 768px) {
   .skills__section__container {
     padding: 3rem 1.5rem;
