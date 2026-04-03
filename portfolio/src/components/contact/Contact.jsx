@@ -1,31 +1,29 @@
 import React, { useRef, useState } from "react";
 import "./contact.css";
 
-import { FaLinkedin, FaGithub } from "react-icons/fa";
-import { MdEmail, MdLocationOn, MdPhone } from "react-icons/md";
-// import emailjs from "@emailjs/browser";
+import emailjs from "@emailjs/browser";
 import { contactInfo, socials } from "../../data/contactData";
 
 function Contact() {
   const formRef = useRef();
-  const [status, setStatus] = useState("idle");
+  const [status, setStatus] = useState("");
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setStatus("sending");
+    try {
+      const result = await emailjs.sendForm(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        formRef.current,
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
+      );
 
-    // emailjs
-    //   .sendForm(
-    //     "YOUR_SERVICE_ID",
-    //     "YOUR_TEMPLATE_ID",
-    //     formRef.current,
-    //     "YOUR_PUBLIC_KEY",
-    //   )
-    //   .then(() => {
-    //     setStatus("success");
-    //     formRef.current.reset();
-    //   })
-    //   .catch(() => setStatus("error"));
+      setStatus("success");
+      formRef.current.reset(); //clear the form
+    } catch (error) {
+      setStatus("error");
+    }
   };
 
   return (

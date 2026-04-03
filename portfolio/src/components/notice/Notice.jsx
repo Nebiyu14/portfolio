@@ -4,7 +4,7 @@ import "./notice.css";
 function Notice() {
   return (
     <div className="maintenance__container">
-      <p className="maintenance__text">🚧 This page is under maintenance. Check back soon!</p>
+      <p className="maintenance__text">This website is under maintenance.</p>
     </div>
   );
 }
