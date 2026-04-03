@@ -13,7 +13,7 @@ function Header({ isDark, toggleTheme }) {
     <div className="header__section__container">
       {/* logo */}
       <div className="header__section__logo">
-        <Link to={"/"}>ናደዉ ወልደሰማያት</Link>
+        <Link to={"/"}>አቶ ነብዩ</Link>
       </div>
       <div>
         {/* navlinks */}

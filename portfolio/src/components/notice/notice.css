@@ -5,9 +5,9 @@
   justify-content: center;
   background-color: var(--bg-primary);
   overflow: hidden;
-  position: sticky;
+  /* position: sticky;
   top: 70px;
-  z-index: 3;
+  z-index: 3; */
 }
 
 .maintenance__text {

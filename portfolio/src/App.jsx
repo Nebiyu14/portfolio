@@ -8,6 +8,7 @@ import Services from "./components/services/Services";
 import Projects from "./components/projects/Projects";
 import Notice from "./components/notice/Notice";
 import Contact from "./components/contact/Contact";
+import Footer from "./components/footer/Footer";
 
 function App() {
   const [isDark, setIsDark] = useState(true);
@@ -25,13 +26,14 @@ function App() {
     <>
       <div>
         <Header isDark={isDark} toggleTheme={toggleTheme} />
-        {/* <Notice/> */}
+        <Notice/>
         <Hero />
         <About />
         <Skills />
         <Services />
         <Projects />
         <Contact />
+        <Footer />
       </div>
     </>
   );
