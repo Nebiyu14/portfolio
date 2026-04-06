@@ -3,13 +3,11 @@ import "./hero.css";
 
 import { TypeAnimation } from "react-type-animation";
 
-function Hero() {
+function Hero({ scrollToSection }) {
   return (
     <div className="hero__section__container">
       <div className="hero__section__content">
-        {/* <h1 className="hero__section__title">ሰላም, I'm ጋሽ ናደዉ እባላለዉ</h1> */}
-        <h1 className="hero__section__title">ሰላም ፣ አቶ ነብዩ ናደዉ እባላለዉ!</h1>
-        {/* <h1 className="hero__section__title">Hi, I'm Nebiyu Tesfaye Nadew</h1> */}
+        <h1 className="hero__section__title">Hi, I'm Nebiyu Tesfaye Nadew</h1>
         <div className="hero__section__animation">
           <TypeAnimation
             sequence={[
@@ -34,10 +32,16 @@ function Hero() {
           scalable, and user-focused web applications with React and Node.js.
         </p>
         <div className="hero__section__buttons">
-          <button className="btn hero__section__btn_primary">
+          <button
+            className="btn hero__section__btn_primary"
+            onClick={() => scrollToSection("projects")}
+          >
             View My Work
           </button>
-          <button className="btn hero__section__btn_secondary">
+          <button
+            className="btn hero__section__btn_secondary"
+            onClick={() => scrollToSection("contact")}
+          >
             Get In Touch
           </button>
         </div>

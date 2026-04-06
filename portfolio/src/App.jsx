@@ -6,9 +6,9 @@ import About from "./components/about/About";
 import Skills from "./components/skills/Skills";
 import Services from "./components/services/Services";
 import Projects from "./components/projects/Projects";
-import Notice from "./components/notice/Notice";
 import Contact from "./components/contact/Contact";
 import Footer from "./components/footer/Footer";
+import ScrollToTop from "./components/scrollToTop/ScrollToTop";
 
 function App() {
   const [isDark, setIsDark] = useState(true);
@@ -22,18 +22,39 @@ function App() {
   const toggleTheme = () => {
     setIsDark((prev) => !prev);
   };
+  const scrollToSection = (id) => {
+    const section = document.getElementById(id);
+    section?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <>
       <div>
-        <Header isDark={isDark} toggleTheme={toggleTheme} />
-        <Notice/>
-        <Hero />
-        <About />
-        <Skills />
-        <Services />
-        <Projects />
-        <Contact />
-        <Footer />
+        <Header
+          isDark={isDark}
+          toggleTheme={toggleTheme}
+          scrollToSection={scrollToSection}
+        />
+        <section id="home">
+          <Hero scrollToSection={scrollToSection} />
+        </section>
+        <section id="about">
+          <About />
+        </section>
+        <section id="skills">
+          <Skills />
+        </section>
+        <section id="services">
+          <Services />
+        </section>
+        <section id="projects">
+          <Projects />
+        </section>
+        <section id="contact">
+          <Contact />
+        </section>
+        <Footer scrollToSection={scrollToSection} />
+        <ScrollToTop />
       </div>
     </>
   );

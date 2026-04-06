@@ -1,4 +1,4 @@
-/* ── container ── */
+/*   container   */
 .footer__container {
   padding: 1rem 3rem;
   background-color: var(--bg-secondary);
@@ -11,7 +11,7 @@
   box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.295);
 }
 
-/* ── top — three columns ── */
+/*   top — three columns   */
 .footer__top {
   width: 100%;
   display: flex;
@@ -20,7 +20,7 @@
   flex-wrap: wrap;
 }
 
-/* ── brand ── */
+/*   brand   */
 .footer__brand {
   display: flex;
   flex-direction: column;
@@ -41,7 +41,7 @@
   line-height: 1.7;
 }
 
-/* ── nav links ── */
+/*   nav links   */
 .footer__links__title,
 .footer__socials__title {
   font-size: 0.85rem;
@@ -79,9 +79,10 @@
   border-color: transparent;
   transform: translateY(-3px);
   box-shadow: 0 6px 20px rgba(59, 130, 246, 0.35);
+  cursor: pointer;
 }
 
-/* ── socials ── */
+/*   socials   */
 .footer__socials {
   display: flex;
   flex-direction: column;
@@ -115,7 +116,7 @@
   box-shadow: 0 6px 20px rgba(59, 130, 246, 0.35);
 }
 
-/* ── divider ── */
+/*   divider   */
 .footer__divider {
   height: 1px;
   width: 100%;
@@ -127,7 +128,7 @@
   );
 }
 
-/* ── bottom ── */
+/*   bottom   */
 .footer__bottom {
   display: flex;
   justify-content: space-between;
@@ -147,7 +148,7 @@
   font-weight: 600;
 }
 
-/* ── mobile ── */
+/*   mobile   */
 @media (max-width: 768px) {
   .footer__container {
     padding: 3rem 1.5rem 1.5rem;
@@ -156,6 +157,7 @@
   .footer__top {
     flex-direction: column;
     gap: 2rem;
+    align-items: center;
   }
 
   .footer__bottom {

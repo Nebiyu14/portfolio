@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./header.css";
+import logo from "../../assets/logo/logo_handwriiten.jpg";
 
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { MdDarkMode, MdLightMode } from "react-icons/md";
@@ -7,13 +8,21 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { RxCross2 } from "react-icons/rx";
 import { Link } from "react-router-dom";
 
-function Header({ isDark, toggleTheme }) {
+function Header({ isDark, toggleTheme, scrollToSection }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const handleNavClick = (id) => {
+    scrollToSection(id);
+    setIsMenuOpen(false); //for mobile view
+  };
   return (
     <div className="header__section__container">
       {/* logo */}
-      <div className="header__section__logo">
-        <Link to={"/"}>አቶ ነብዩ</Link>
+      <div
+        className="header__section__logo"
+        onClick={() => scrollToSection("home")}
+      >
+        <Link to={"/"}>Nebiyu</Link>
       </div>
       <div>
         {/* navlinks */}
@@ -21,12 +30,12 @@ function Header({ isDark, toggleTheme }) {
           className={`header__section__navlinks ${isMenuOpen ? "show_navlinks" : ""}`}
         >
           <ul>
-            <li onClick={() => setIsMenuOpen(false)}>Home</li>
-            <li onClick={() => setIsMenuOpen(false)}>About</li>
-            <li onClick={() => setIsMenuOpen(false)}>Skills</li>
-            <li onClick={() => setIsMenuOpen(false)}>Services</li>
-            <li onClick={() => setIsMenuOpen(false)}>Projects</li>
-            <li onClick={() => setIsMenuOpen(false)}>Contact</li>
+            <li onClick={() => handleNavClick("home")}>Home</li>
+            <li onClick={() => handleNavClick("about")}>About</li>
+            <li onClick={() => handleNavClick("skills")}>Skills</li>
+            <li onClick={() => handleNavClick("services")}>Services</li>
+            <li onClick={() => handleNavClick("projects")}>Projects</li>
+            <li onClick={() => handleNavClick("contact")}>Contact</li>
           </ul>
         </div>
       </div>

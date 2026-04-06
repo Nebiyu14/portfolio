@@ -33,6 +33,11 @@
   color: var(--primary-hover);
 }
 
+.header__section__logo img {
+  width: 100px;
+  height: fit-content;
+}
+
 /* header navlinks */
 .header__section__navlinks ul {
   display: flex;

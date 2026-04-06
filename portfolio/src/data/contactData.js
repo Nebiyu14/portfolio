@@ -6,7 +6,7 @@ export const contactInfo = [
     icon: MdEmail,
     label: "Email",
     value: "tesfayenebiyu3@gmail.com",
-    href: "mailto:your@email.com",
+    href: null,
   },
   {
     icon: MdPhone,

@@ -2,7 +2,13 @@ import React from "react";
 import "./footer.css";
 
 import { socials } from "../../data/contactData";
-import { FaHome, FaUser, FaPhoneAlt, FaTools, FaProjectDiagram } from "react-icons/fa";
+import {
+  FaHome,
+  FaUser,
+  FaPhoneAlt,
+  FaTools,
+  FaProjectDiagram,
+} from "react-icons/fa";
 import { MdMiscellaneousServices, MdContactMail } from "react-icons/md";
 
 const navlinks = [
@@ -14,13 +20,13 @@ const navlinks = [
   { icon: <FaPhoneAlt />, title: "Contact" },
 ];
 
-function Footer() {
+function Footer({ scrollToSection }) {
   return (
     <footer className="footer__container">
       <div className="footer__top">
         {/* logo + tagline */}
         <div className="footer__brand">
-          <h2 className="footer__logo">አቶ ነብዩ</h2>
+          <h2 className="footer__logo">Nebiyu</h2>
           <p className="footer__tagline">
             Building clean, scalable, and user-focused web applications.
           </p>
@@ -31,8 +37,13 @@ function Footer() {
           <h4 className="footer__links__title">Quick Links</h4>
           <ul className="footer__links__list">
             {navlinks.map((link) => (
-              <li key={link.title}>
-                <a href={null} title={link.title} >{link.icon}</a>
+              <li
+                key={link.title}
+                onClick={() => scrollToSection(link.title.toLowerCase())}
+              >
+                <a href={null} title={link.title}>
+                  {link.icon}
+                </a>
               </li>
             ))}
           </ul>
@@ -60,10 +71,10 @@ function Footer() {
         </div>
       </div>
 
-      {/* ── divider ── */}
+      {/*   divider   */}
       <div className="footer__divider"></div>
 
-      {/* ── bottom ── */}
+      {/*   bottom   */}
       <div className="footer__bottom">
         <p className="footer__copy">
           © {new Date().getFullYear()} Nebiyu. All rights reserved.
