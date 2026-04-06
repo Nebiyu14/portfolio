@@ -1,10 +1,10 @@
 .scroll__to__top {
   position: fixed;
   bottom: 2rem;
-  right: 2rem;
+  right: 1.5rem;
   z-index: 999;
-  width: 44px;
-  height: 44px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   border: 1px solid #2563eb;
   cursor: pointer;
@@ -29,6 +29,7 @@
 }
 
 .scroll__to__top:hover {
-  transform: translateY(-3px);
+  transform: translateY(-2px);
   filter: drop-shadow(0px 0px rgba(59, 130, 246, 0.6));
+  backdrop-filter: blur(10px);
 }
