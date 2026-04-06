@@ -160,6 +160,10 @@
     align-items: center;
   }
 
+  .footer__tagline{
+    text-align: center;
+  }
+
   .footer__bottom {
     flex-direction: column;
     align-items: center;
