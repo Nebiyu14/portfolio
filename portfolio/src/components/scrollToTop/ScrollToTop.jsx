@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./scrolltotop.css";
+import "./scrollToTop.css";
 
 import { GoArrowUp } from "react-icons/go";
 
