@@ -1,6 +1,5 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./header.css";
-import logo from "../../assets/logo/logo_handwriiten.jpg";
 
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { MdDarkMode, MdLightMode } from "react-icons/md";
@@ -10,11 +9,24 @@ import { Link } from "react-router-dom";
 
 function Header({ isDark, toggleTheme, scrollToSection }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const menuRef = useRef();
 
   const handleNavClick = (id) => {
     scrollToSection(id);
     setIsMenuOpen(false); //for mobile view
   };
+
+  useEffect(() => {
+    const handleMouseClickOutside = (e) => {
+      if (!menuRef?.current?.contains(e.target)) {
+        setIsMenuOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleMouseClickOutside);
+    return () =>
+      document.removeEventListener("mousedown", handleMouseClickOutside);
+  }, []);
+
   return (
     <div className="header__section__container">
       {/* logo */}
@@ -28,6 +40,7 @@ function Header({ isDark, toggleTheme, scrollToSection }) {
         {/* navlinks */}
         <div
           className={`header__section__navlinks ${isMenuOpen ? "show_navlinks" : ""}`}
+          ref={menuRef}
         >
           <ul>
             <li onClick={() => handleNavClick("home")}>Home</li>

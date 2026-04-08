@@ -12,19 +12,20 @@ function Hero({ scrollToSection }) {
           <TypeAnimation
             sequence={[
               "Full-Stack Developer",
-              600,
+              500,
               "React Developer",
-              600,
+              500,
               "NodeJS Developer",
-              600,
+              500,
               "Web App Builder",
-              600,
+              500,
             ]}
-            speed={90}
+            speed={50}
             wrapper="span"
-            deletionSpeed={65}
+            deletionSpeed={50}
             repeat={Infinity}
             cursor={false}
+            omitDeletionAnimation={false}
           />
         </div>
         <p className="hero__section__description">

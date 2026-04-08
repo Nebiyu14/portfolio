@@ -33,10 +33,6 @@
   color: var(--primary-hover);
 }
 
-.header__section__logo img {
-  width: 100px;
-  height: fit-content;
-}
 
 /* header navlinks */
 .header__section__navlinks ul {
@@ -110,7 +106,7 @@
   .header__section__navlinks {
     position: absolute;
     display: block;
-    top: 105%;
+    top: 100%;
     left: 0;
     padding: 1rem 0;
     border-bottom: 1px solid var(--border-color);
