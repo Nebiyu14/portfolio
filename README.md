@@ -104,4 +104,4 @@ portfolio/
 
 ## Author
 
-Created for showcasing professional work and skills.
+Nebiyu Tesfaye Nadew
