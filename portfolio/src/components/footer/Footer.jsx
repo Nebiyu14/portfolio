@@ -77,7 +77,7 @@ function Footer({ scrollToSection }) {
       {/*   bottom   */}
       <div className="footer__bottom">
         <p className="footer__copy">
-          © {new Date().getFullYear()} Nebiyu. All rights reserved.
+          © {new Date().getFullYear()} Nebiyu. Open to new opportunities.
         </p>
         <p className="footer__credit">
           Designed & Built by <span>Nebiyu.</span>
